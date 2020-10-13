@@ -105,6 +105,7 @@ function handleRestartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+    console.log("restarting...")
 }
 /*
 And finally we add our event listeners to the actual game cells, as well as our 
