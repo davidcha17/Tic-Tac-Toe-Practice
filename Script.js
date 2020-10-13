@@ -42,6 +42,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
+    console.log("change")
 }
 
 const winningConditions = [
@@ -82,6 +83,8 @@ function handleResultValidation() {
         gameActive = false;
         return;
     }
+
+    handlePlayerChange();
 }
 
 function handleCellClick(clickedCellEvent) {
